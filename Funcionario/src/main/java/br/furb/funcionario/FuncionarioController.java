@@ -1,5 +1,7 @@
 package br.furb.funcionario;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +18,7 @@ public class FuncionarioController {
 	FuncionarioService funcionarioService;
 
 	@RequestMapping(value = "/funcionario", method = RequestMethod.POST)
-	public ResponseEntity save(@RequestBody Funcionario funcionario) {
+	public ResponseEntity<Funcionario> save(@RequestBody Funcionario funcionario) {
 		try {
 			return ResponseEntity.ok(funcionarioService.save(funcionario));
 		} catch (Exception e) {
@@ -25,7 +27,7 @@ public class FuncionarioController {
 	}
 
 	@RequestMapping(value = "/funcionario", method = RequestMethod.GET)
-	public ResponseEntity findAll() {
+	public ResponseEntity<List<Funcionario>> findAll() {
 		try {
 			return ResponseEntity.status(HttpStatus.OK).body(funcionarioService.findAll());
 		} catch (Exception e) {
@@ -43,7 +45,7 @@ public class FuncionarioController {
 	}
 
 	@RequestMapping(value = "/funcionario/{id}", method = RequestMethod.PUT)
-	public ResponseEntity update(@PathVariable(value = "id") long id, @RequestBody Funcionario funcionario) {
+	public ResponseEntity<Funcionario> update(@PathVariable(value = "id") long id, @RequestBody Funcionario funcionario) {
 		try {
 			Funcionario funcionarioAnterior = funcionarioService.findById(id);
 			funcionarioAnterior.setCargo(funcionario.getCargo());
@@ -56,7 +58,7 @@ public class FuncionarioController {
 	}
 
 	@RequestMapping(value = "/funcionario/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity deleteById(@PathVariable("id") long id) {
+	public ResponseEntity<?> deleteById(@PathVariable("id") long id) {
 		try {
 			funcionarioService.deleteById(id);
 			return ResponseEntity.status(HttpStatus.OK).body(null);

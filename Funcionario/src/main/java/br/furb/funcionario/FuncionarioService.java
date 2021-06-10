@@ -8,7 +8,7 @@ public interface FuncionarioService {
 	
 	Funcionario findById(long id);
 	
-	Funcionario save(Funcionario aluno);
+	Funcionario save(Funcionario funcionario);
 	
 	void deleteById(long id);
 
