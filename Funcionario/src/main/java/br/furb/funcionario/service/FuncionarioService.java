@@ -1,6 +1,8 @@
-package br.furb.funcionario;
+package br.furb.funcionario.service;
 
 import java.util.List;
+
+import br.furb.funcionario.model.Funcionario;
 
 public interface FuncionarioService {
 	

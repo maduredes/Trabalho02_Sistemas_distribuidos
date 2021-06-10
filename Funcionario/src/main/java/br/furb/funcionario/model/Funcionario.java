@@ -1,4 +1,4 @@
-package br.furb.funcionario;
+package br.furb.funcionario.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

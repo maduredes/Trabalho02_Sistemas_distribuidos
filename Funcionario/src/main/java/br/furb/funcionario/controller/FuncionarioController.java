@@ -1,4 +1,4 @@
-package br.furb.funcionario;
+package br.furb.funcionario.controller;
 
 import java.util.List;
 
@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import br.furb.funcionario.model.Funcionario;
+import br.furb.funcionario.service.FuncionarioService;
 
 @RestController
 public class FuncionarioController {

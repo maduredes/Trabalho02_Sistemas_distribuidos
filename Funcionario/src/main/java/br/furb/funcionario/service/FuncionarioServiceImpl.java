@@ -1,9 +1,12 @@
-package br.furb.funcionario;
+package br.furb.funcionario.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import br.furb.funcionario.model.Funcionario;
+import br.furb.funcionario.repository.FuncionarioRepository;
 
 @Service
 public class FuncionarioServiceImpl implements FuncionarioService {
