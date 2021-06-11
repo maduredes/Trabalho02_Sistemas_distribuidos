@@ -1,4 +1,4 @@
-Trabalho 2 – Parte 1
+<strong>Trabalho 2 – Parte 1</strong>
 Implemente um sistema distribuído utilizando a arquitetura de microsserviços. O sistema distribuído deve
 ser construído com os seguintes microsserviços:
 • Microsserviço de “funcionários”: deve permitir a manipulação de um cadastro de funcionário. O
